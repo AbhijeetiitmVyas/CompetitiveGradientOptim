@@ -5,10 +5,10 @@
 ### numpy==1.16.5
 ### matplotlib==3.1.1
 
-Shrinking region with increasing $\alpha$:
+$x^2y$--Shrinking region with increasing $\alpha$:
 
 ![alt-text](https://github.com/AbhijeetiitmVyas/CompetitiveGradientOptim/blob/main/Shrinkning%20Region.gif)
 
-Convergence to Nash with large $\alpha$:
+$x^2y+xy$--Convergence to Nash with large $\alpha$:
 
 ![alt-text](https://github.com/AbhijeetiitmVyas/CompetitiveGradientOptim/blob/main/Not%20MVI.gif)
