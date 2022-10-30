@@ -4,6 +4,7 @@
 ## Requirements 
 ### numpy==1.16.5
 ### matplotlib==3.1.1
+## Illustrations
 
 $x^2y$ : Shrinking region with increasing $\alpha$
 
