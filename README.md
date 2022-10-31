@@ -13,3 +13,8 @@ $x^2y$ : Shrinking region with increasing $\alpha$
 $x^2y+xy$ : Convergence to Nash with large $\alpha$
 
 ![alt-text](https://github.com/AbhijeetiitmVyas/CompetitiveGradientOptim/blob/main/Not%20MVI.gif)
+
+$f(x, y) = (x − 1/2)(y − 1/2) +\frac{1}{3}e^{−(x − 1/4)^2 − (y − 3/4)^2}$ : Vanishing incoherent region 
+
+![alt-text](https://github.com/AbhijeetiitmVyas/CompetitiveGradientOptim/blob/main/Shrinkning%20Region.gif)
+
