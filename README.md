@@ -6,6 +6,8 @@
 ### matplotlib==3.1.1
 ## Illustrations
 
+These are some examples of non-convex non-concave functions for which the CGO algorithm finds the saddle points for some choice of parameter alpha.
+
 $x^2y$ : Shrinking region with increasing $\alpha$
 
 ![alt-text](https://github.com/AbhijeetiitmVyas/CompetitiveGradientOptim/blob/main/Shrinkning%20Region.gif)
