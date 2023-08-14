@@ -1,6 +1,6 @@
 # Competitive Gradient Optimization
 ## Description
-### Code illustrating the Competitive Gradient Optimization algorithm introduced in [Competitive Gradient Optimization](https://arxiv.org/abs/2205.14232)
+### Code illustrating the Competitive Gradient Optimization algorithm introduced in [Competitive Gradient Optimization[arxiv]](https://arxiv.org/abs/2205.14232), [Competitive Gradient Optimization[PMLR:ICML]](https://proceedings.mlr.press/v202/vyas23a.html)
 ## Requirements 
 ### numpy==1.16.5
 ### matplotlib==3.1.1
