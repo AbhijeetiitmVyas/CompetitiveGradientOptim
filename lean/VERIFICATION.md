@@ -5,31 +5,23 @@ Verified 2026-11-17 in a Linux cloud workspace.
 - Lean: 4.19.0, commit `6caaee842e94`.
 - mathlib: v4.19.0, commit `c44e0c8ee63ca166450922a373c7409c5d26b00b`.
 - Command: `lake build`.
-- Result: **passed**, exit code 0.
-- `#print axioms CGO.energy_tends_to_zero`:
+- Result: **passed**, exit code 0, no warnings in the final build.
+- All seven modules and root CGO import target compile.
+- `#print axioms CGO.objective_optimistic_converges` reports
   `[propext, Classical.choice, Quot.sound]`.
-- No `sorry`, `admit`, or custom `axiom` declarations occur in the Lean source.
-- All four proof files and the root `CGO` import target compiled.
-- These are symbolic kernel-checked proofs, not numerical tests.
+- The other included axiom audits report these same standard foundations.
+- No `sorry`, `admit`, or custom `axiom` declarations in the Lean source.
 
-The formalization proves the scalar bilinear specialization and the general
-fixed-step optimistic transformed-field residual rate described in README.
-All four source modules and the root target compile. The entire paper has
-**not** been verified. The general rate
-`CGO.optimistic_competitive_average_rate` has the same three standard axioms
-and no `sorryAx`.
+The current full-iterate theorem is for fixed-step objective-derived optimistic
+CGO under the README's explicit global regularity, root existence and all-root
+Minty assumptions. It concludes stationarity. It is not certification of the
+entire paper or its full variable-step statements.
 
-## Environment note
-
-Mathlib's precompiled dependency cache was used. Initial dependency downloads
-hit a read-only default cache directory and later rate limiting; a workspace-local
-cache and reduced download concurrency resolved these setup issues. The temporary
-download-tool concurrency change was reverted before the final successful build.
-No mathematical dependency source was modified.
-
-## Source provenance
+Mathlib's dependency cache was used; some dependencies were also locally built.
+No mathematical dependency source was modified. This is symbolic proof checking,
+not merely numerical experimentation.
 
 Official PMLR PDF SHA-256:
 `081a4984e8126adecea5e593e48e832808b1bfaefc63d108e36226f281c621ee`.
-PDF obtained from https://proceedings.mlr.press/v202/vyas23a/vyas23a.pdf.
-The source paper is linked, not redistributed in this project.
+Source: https://proceedings.mlr.press/v202/vyas23a/vyas23a.pdf.
+The paper itself is linked, not redistributed.
