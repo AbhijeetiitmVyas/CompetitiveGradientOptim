@@ -1,0 +1,3 @@
+ℹ [1495/1497] Replayed CGO.Bilinear
+info: ././././CGO/Bilinear.lean:101:0: 'CGO.energy_tends_to_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully.
