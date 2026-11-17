@@ -1,37 +1,40 @@
-# Statement correspondence ledger
+# Statement correspondence and remaining work
 
-| Lean result | Paper relationship | Status boundary |
-|---|---|---|
-| `saddle_iff_origin` | Scalar example f(x,y)=xy | Exact saddle inequalities |
-| `direction_solves_system` | Equation (3) | Scalar block-system identity |
-| `energy_step` | Discrete CGO convergence mechanism | Exact scalar identity; no descent hypothesis assumed |
-| `factor_nonneg`, `factor_lt_one` | Stable parameter region | Assumes 0 < eta < 2 alpha; entails alpha > 0 |
-| `energy_iterate` | Geometric rate | Exact formula for every natural n |
-| `energy_tends_to_zero` | Scalar bilinear convergence | Squared distance tends to zero; not general nonlinear theorem |
-| `gda_factor` | CGO alpha=0 reduces to GDA | Exact factor 1+eta^2 |
+## Proved
 
-## General extension
+- Scalar bilinear equation (3), unique saddle, exact contraction and geometric rate.
+- General Euclidean extragradient energy identity and descent under explicit
+  local Minty and Lipschitz inequalities.
+- Fixed-step average squared-residual bound with a positive uniform margin.
+- Finite-dimensional invertibility of the identity plus a zero-quadratic-form
+  linear interaction and inverse nonexpansiveness.
+- State-dependent transformed-field Lipschitz estimate from explicit base-field
+  and interaction bounds.
+- Riesz representation of the objective's actual second Fréchet derivative;
+  this is the derivative of its gradient when the objective is C².
+- Hessian symmetry from Schwarz's theorem, not an unproved symmetry axiom.
+- Player-sign commutator extraction: positive-to-negative mixed block and
+  cancellation of same-sign blocks. Zero quadratic form follows.
+- Competitive zeros iff objective stationary points for a sign involution.
+- General fixed-step full iterate convergence under Minty at every root,
+  existence of a root and a global Lipschitz bound. Residual summability and
+  compactness/Fejér arguments are proved.
+- Objective-derived optimistic CGO convergence to a stationary point under the
+  README's complete explicit hypotheses.
 
-`Extragradient.lean` proves the exact energy identity, local descent,
-telescoping, and explicit fixed-step average squared-field bound in any real
-inner product space. `Skew.lean` proves inverse existence and nonexpansiveness
-in finite dimension. `TransformedField.lean` proves the Lipschitz bound and
-combines these into `optimistic_competitive_average_rate`.
+## Not yet proved
 
-The general rate uses `L=Lg+|alpha| LH M` and a constant positive stepsize.
-It is not presented as identical to all variable-step cases or the exact
-constants of published Theorem 5.4. It is a squared-residual bound, not an
-iterate-convergence theorem.
+- Literal product-coordinate instantiation `J=diag(+I,-I)` with partial-gradient
+  and partial-Hessian notation matched point-for-point to the paper.
+- Translation from every printed regularity constant to the global analytic
+  assumptions used in the current theorem.
+- Published variable-step conditions/constants or the full Theorems 5.1–5.4.
+- General constrained/projected/proximal updates or invariance in restricted
+  domains where only local bounds hold.
+- The implication from stationary limit to saddle point via the paper's full
+  definition of alpha-coherence.
+- Numerical solver, GAN experiments or empirical claims.
 
-## Not formalized yet
-
-- Identification of the derivatives of f(x,y)=xy through Lean's derivative APIs.
-- Identification of the objective's cross-Hessian block with the abstract skew
-  operator, including the differential calculus and regularity hypotheses.
-- Theorems 5.1, 5.2, 5.3, or 5.4 in their full published form.
-- General projected/proximal domains, or trajectory invariance in a restricted
-  domain where local rather than global analytic assumptions apply.
-- Convergence of the full iterate sequence for the general transformed field.
-- Empirical experiments, GAN applications, or an executable numerical solver.
-
-No custom axioms or placeholders bridge these gaps.
+These boundaries are not filled by custom axioms, placeholders or assumed
+conclusions. The current fixed-step theorem is intentionally labeled separately
+from the published variable-step theorem.
