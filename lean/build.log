@@ -1,12 +1,21 @@
-ℹ [1494/1589] Replayed CGO.Bilinear
+ℹ [1494/1499] Replayed CGO.Bilinear
 info: ././././CGO/Bilinear.lean:101:0: 'CGO.energy_tends_to_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [1756/1760] Replayed CGO.Skew
-info: ././././CGO/Skew.lean:76:0: 'CGO.competitiveInverse_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [1757/1760] Built CGO.Extragradient
+ℹ [1682/1788] Replayed CGO.Extragradient
 info: ././././CGO/Extragradient.lean:100:0: 'CGO.extragradient_descent' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././CGO/Extragradient.lean:101:0: 'CGO.sum_residual_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [1758/1760] Built CGO.TransformedField
+ℹ [1756/1788] Replayed CGO.Skew
+info: ././././CGO/Skew.lean:76:0: 'CGO.competitiveInverse_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1757/1788] Replayed CGO.TransformedField
 info: ././././CGO/TransformedField.lean:80:0: 'CGO.optimistic_competitive_average_rate' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: ././././CGO/TransformedField.lean:81:0: 'CGO.transformedField_lipschitz' depends on axioms: [propext, Classical.choice, Quot.sound]
-✔ [1759/1760] Built CGO
+ℹ [2075/2079] Replayed CGO.Objective
+info: ././././CGO/Objective.lean:122:0: 'CGO.objectiveCompetitiveGradient_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././CGO/Objective.lean:123:0: 'CGO.objectiveInteraction_zeroQuadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././CGO/Objective.lean:125:0: 'CGO.gradient_hasFDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2076/2079] Built CGO.Convergence
+info: ././././CGO/Convergence.lean:101:0: 'CGO.converges_of_root_descent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ././././CGO/Convergence.lean:103:0: 'CGO.extragradient_converges' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2077/2079] Built CGO.ObjectiveConvergence
+info: ././././CGO/ObjectiveConvergence.lean:43:0: 'CGO.objective_optimistic_converges' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [2078/2079] Built CGO
 Build completed successfully.
