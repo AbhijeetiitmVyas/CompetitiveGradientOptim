@@ -38,3 +38,9 @@
 These boundaries are not filled by custom axioms, placeholders or assumed
 conclusions. The current fixed-step theorem is intentionally labeled separately
 from the published variable-step theorem.
+
+Latest additions (supersede the all-roots-global-Minty limitation above):
+- Verified variable-step weighted residual bound.
+- Verified unweighted rate with an explicit uniform lower descent-weight bound.
+- Verified fixed-step convergence under local Minty at roots and one global Minty point.
+- Still pending: objective saddle characterization and literal published variable-step hypotheses.
