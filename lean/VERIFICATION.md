@@ -25,3 +25,7 @@ Official PMLR PDF SHA-256:
 `081a4984e8126adecea5e593e48e832808b1bfaefc63d108e36226f281c621ee`.
 Source: https://proceedings.mlr.press/v202/vyas23a/vyas23a.pdf.
 The paper itself is linked, not redistributed.
+
+Latest extension: all nine modules build successfully under the same pinned
+Lean/mathlib versions. See replaced build.log. New main theorems print only
+propext, Classical.choice, Quot.sound; no additional axioms or sorry were added.
