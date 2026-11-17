@@ -83,6 +83,24 @@ lake exe cache get
 lake build
 ```
 
-All seven modules compile. Axiom audits show only `propext`, `Classical.choice`,
+All nine modules compile. Axiom audits show only `propext`, `Classical.choice`,
 and `Quot.sound`; no custom axioms or `sorry` bridge missing proofs.
 See VERIFICATION.md and build.log for the recorded build.
+
+## Further verified extension: variable weights and local Minty
+
+`CGO/VariableStep.lean` proves the variable-step estimate with the actual weights
+ηₙ²(1−ηₙ²L²). An unweighted average bound is separately proved under an explicit
+uniform positive lower bound on these weights. Merely positive stepsizes are not
+represented as sufficient for this unweighted bound.
+
+`CGO/LocalConvergence.lean` proves full fixed-step extragradient convergence using
+one global Minty point and only local Minty at every root. The proof controls the
+lookahead inside the Minty neighborhood, establishes local Fejér trapping, and
+uses a bounded subsequence plus residual decay to prove full convergence. Thus
+the earlier all-roots-global-Minty theorem remains valid but is no longer the
+weakest convergence result in this package.
+
+This extension still does not identify all field roots with the paper's saddle
+set or establish the published variable-step convergence claim. It is not a
+verbatim formalization of Theorem 5.4.
