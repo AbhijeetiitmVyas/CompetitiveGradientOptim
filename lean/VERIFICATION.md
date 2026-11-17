@@ -9,11 +9,15 @@ Verified 2026-11-17 in a Linux cloud workspace.
 - `#print axioms CGO.energy_tends_to_zero`:
   `[propext, Classical.choice, Quot.sound]`.
 - No `sorry`, `admit`, or custom `axiom` declarations occur in the Lean source.
-- Both the main proof file and the root `CGO` import target compiled.
+- All four proof files and the root `CGO` import target compiled.
 - These are symbolic kernel-checked proofs, not numerical tests.
 
-The formalization proves the scalar bilinear specialization only. See README
-and STATUS for the precise boundary. The entire paper has **not** been verified.
+The formalization proves the scalar bilinear specialization and the general
+fixed-step optimistic transformed-field residual rate described in README.
+All four source modules and the root target compile. The entire paper has
+**not** been verified. The general rate
+`CGO.optimistic_competitive_average_rate` has the same three standard axioms
+and no `sorryAx`.
 
 ## Environment note
 
