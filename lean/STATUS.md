@@ -10,12 +10,28 @@
 | `energy_tends_to_zero` | Scalar bilinear convergence | Squared distance tends to zero; not general nonlinear theorem |
 | `gda_factor` | CGO alpha=0 reduces to GDA | Exact factor 1+eta^2 |
 
+## General extension
+
+`Extragradient.lean` proves the exact energy identity, local descent,
+telescoping, and explicit fixed-step average squared-field bound in any real
+inner product space. `Skew.lean` proves inverse existence and nonexpansiveness
+in finite dimension. `TransformedField.lean` proves the Lipschitz bound and
+combines these into `optimistic_competitive_average_rate`.
+
+The general rate uses `L=Lg+|alpha| LH M` and a constant positive stepsize.
+It is not presented as identical to all variable-step cases or the exact
+constants of published Theorem 5.4. It is a squared-residual bound, not an
+iterate-convergence theorem.
+
 ## Not formalized yet
 
 - Identification of the derivatives of f(x,y)=xy through Lean's derivative APIs.
-- General block-operator inverse and Hessian regularity estimates.
+- Identification of the objective's cross-Hessian block with the abstract skew
+  operator, including the differential calculus and regularity hypotheses.
 - Theorems 5.1, 5.2, 5.3, or 5.4 in their full published form.
-- General projected/proximal domains or arbitrary matrix bilinear games.
+- General projected/proximal domains, or trajectory invariance in a restricted
+  domain where local rather than global analytic assumptions apply.
+- Convergence of the full iterate sequence for the general transformed field.
 - Empirical experiments, GAN applications, or an executable numerical solver.
 
-The code does not introduce custom axioms or placeholders to bridge these gaps.
+No custom axioms or placeholders bridge these gaps.
